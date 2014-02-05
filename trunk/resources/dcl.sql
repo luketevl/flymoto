@@ -12,7 +12,7 @@ create table entidades(
 	tipo_ent char(1) not null
 	)engine=MYiSAM;
 
-create table tipo_endereco_contato(
+create table tipo_endereco_contatos(
 	id_tip int PRIMARY KEY AUTO_INCREMENT UNSIGNED NOT NULL,
 	nome_tip varchar(100) not null,
 	tipo_tip char(1) not null,
@@ -25,7 +25,7 @@ create table contatos(
 	id_ent int not null,
 	foreign key(id_ent) references entidades(id_ent),
 	id_tip int not null,
-	foreign key(id_tip) references tipo_endereco_contato(id_tip)
+	foreign key(id_tip) references tipo_endereco_contatos(id_tip)
 	)engine=MYiSAM;
 
 create table documentos(
@@ -48,7 +48,7 @@ create table lista_enderecos(
 	id_ent int not null,
 	foreign key(id_ent) references entidades(id_ent),
 	id_tip int not null,
-	foreign key(id_tip) references tipo_endereco_contato(id_tip),
+	foreign key(id_tip) references tipo_endereco_contatos(id_tip),
 	id_end int not null,
 	foreign key(id_end) references enderecos(id_end)
 )engine=MYiSAM;
