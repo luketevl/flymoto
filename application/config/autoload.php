@@ -96,7 +96,7 @@ $autoload['config'] = array();
 |
 */
 
-$autoload['language'] = array('datamapper');
+$autoload['language'] = array('datamapperPT');
 
 
 /*
