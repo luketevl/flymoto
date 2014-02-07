@@ -1,0 +1,35 @@
+*{
+	margin: 0px 0px 0px 0px;
+}
+a:link{
+	text-decoration: none;
+}
+a:hover{
+	color:#52840c !important;
+}
+a:visited{
+}
+a:active{
+}
+#logo{
+	margin-left: 1.5%;
+	margin-top: 1.5%;
+	margin-bottom: 1.5%;
+	float:left;
+	width:48%;
+}
+#menu{
+	float:left;
+	margin-right: 1.5%;
+	margin-top: 1.5%;
+	width:48%;
+	word-wrap:normal;
+	text-align: right;
+}
+#menu a{
+	color: #666666;
+	padding-left: 5%;
+}
+.full_width{
+	width: 100%;
+}
