@@ -13,7 +13,7 @@ create table entidades(
 	)engine=MYiSAM;
 
 create table tipo_endereco_contatos(
-	id_tip int PRIMARY KEY AUTO_INCREMENT UNSIGNED NOT NULL,
+	id_tip int UNSIGNED AUTO_INCREMENT PRIMARY KEY   NOT NULL,
 	nome_tip varchar(100) not null,
 	tipo_tip char(1) not null,
 	editavel_tip char(1)
