@@ -95,7 +95,7 @@
 			<i>OBS: VÁLIDO PARA APENAS OS <strong>100</strong> PRIMEIROS</i>
 		</p>
 		<?php 
-				echo form_open('save_news');
+				echo form_open('site/landing_page/save_news');
 			
 			?>
 			<section>
@@ -116,7 +116,16 @@
 		<p>
 			Todos os direitos reservados FlyMoto 2014
 		</p>
-		
-	</footer>
+		<section id="social">
+			<a href="">
+				<img src="<?php echo base_url(); ?>resources/img/site/facebook.png"  id="trigger" style="max-height:250px !important; max-width:250px;"/>
+			</a>
+			<a href="">
+				<img src="<?php echo base_url(); ?>resources/img/site/twitter.png"  id="trigger" style="max-height:250px !important; max-width:250px;"/>
+			</a>
+			<a href="">
+				<img src="<?php echo base_url(); ?>resources/img/site/youtube.png"  id="trigger" style="max-height:250px !important; max-width:250px;"/>
+			</a>
+		</section>
 </body>
 </html>
