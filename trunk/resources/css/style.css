@@ -52,7 +52,6 @@ header{
 
 
 .left-text-content{
-	border: 1px solid red;
 	width: 68%;
 	float:left;
 	padding-left: 1.5%;
@@ -62,7 +61,6 @@ header{
 
 .rigth-icon-content{
 	text-align: center;
-	border: 1px solid red;
 	width: 29%;
 	float:left;
 }
@@ -149,8 +147,21 @@ section > input[type="text"] {
 
 footer{
 	width: 100%;
-	height: 200px;
+	height: 180px;
 	background-color: #cdcdcd;
 	color:#999999;
 
+}
+footer > p{
+	float: left;
+	margin-top: 160px;
+	width: 40%;
+	margin-left: 1.5%;
+	color: #999999;
+}
+#social{
+	margin-right: 1.5%; 
+	height: 64px;
+	float:right;
+	margin-top: 55px;
 }
