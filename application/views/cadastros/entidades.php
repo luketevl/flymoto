@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php
-	echo form_open('teste/custom_form','name="form"');
+	echo form_open('cadastros/entidades/custom_form','name="form"');
 	echo form_fieldset('Dados pessoais');
 
 	echo form_label('Nome Completo');
@@ -33,7 +33,6 @@
 	echo form_fieldset_close();
 	echo form_submit('submit','Salvar');
 	echo form_close();
-
 ?>
 </body>
 </html>

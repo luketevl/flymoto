@@ -100,7 +100,7 @@
 			?>
 			<section>
 				
-				<input type='email' placeholder="Digite seu email ... " class="email" name="email" />
+				<input type='email' placeholder="Digite seu email ... " class="email" name="email" required="required" />
 			<?php
 				echo "<br />";
 				echo form_submit('btn_enviar','Enviar');
