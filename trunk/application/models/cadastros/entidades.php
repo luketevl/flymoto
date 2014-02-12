@@ -19,7 +19,7 @@
  * @author		Phil DeJarnett
  * @link		http://www.overzealous.com
  */
-class News_Letter extends DataMapper {
+class Entidades extends DataMapper {
 
 	// Uncomment and edit these two if the class has a model name that
 	//   doesn't convert properly using the inflector_helper.
@@ -126,10 +126,10 @@ class News_Letter extends DataMapper {
 	}
 	*/
 	public function salvar($_data){
-		$n = new News_Letter();
-		$n->email      = $_data['email'];
+		$n = new Entidades();
+		pre($_data);
 		$n->dt_criacao = 		date("Y-m-d H:i:s");
-		return $n->save();
+		return $n->save($_data);
 	}
 }
 
