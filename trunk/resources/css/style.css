@@ -136,7 +136,7 @@ section > input[type="submit"]{
 	padding-left: 2%;
 	padding-right: 2%;
 }
-section > input[type="text"] {
+section > input[type="email"] {
 	width: 30%;
 	clear: both;
 	font-size: 90%;

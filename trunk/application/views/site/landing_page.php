@@ -99,9 +99,9 @@
 			
 			?>
 			<section>
-			<?php
 				
-				echo form_input('email','','placeholder="Digite seu email ... " class="email"');
+				<input type='email' placeholder="Digite seu email ... " class="email" name="email" />
+			<?php
 				echo "<br />";
 				echo form_submit('btn_enviar','Enviar');
 				
