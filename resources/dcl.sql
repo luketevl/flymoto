@@ -87,3 +87,9 @@ create table lista_acessorios(
 	id_ace int not null,
 	foreign key(id_ace) references acessorios(id_ace)
 )engine=MYiSAM;
+
+create table news_letters(
+	id_news int UNSIGNED AUTO_INCREMENT  PRIMARY KEY NOT NULL,
+	email varchar(255) not null,
+	dt_criacao datetime not null
+)engine=MYiSAM;
