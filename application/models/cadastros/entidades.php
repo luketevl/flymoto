@@ -19,7 +19,7 @@
  * @author		Phil DeJarnett
  * @link		http://www.overzealous.com
  */
-class Entidade extends DataMapper {
+class Entidades extends DataMapper {
 
 	// Uncomment and edit these two if the class has a model name that
 	//   doesn't convert properly using the inflector_helper.
@@ -35,10 +35,10 @@ class Entidade extends DataMapper {
 	// --------------------------------------------------------------------
 
 	// Insert related models that Template can have just one of.
-	//var $has_one = array('enderecos_temp','veiculos_temp');
+	var $has_one = array();
 
 	// Insert related models that Template can have more than one of.
-	//var $has_many = array();
+	var $has_many = array();
 
 	/* Relationship Examples
 	 * For normal relationships, simply add the model name to the array:
@@ -126,19 +126,10 @@ class Entidade extends DataMapper {
 	}
 	*/
 	public function salvar($_data){
-		//$e = new Entidade();
-//		echo "<pre>"; print_r(				array_merge((array)$n->stored, $_data)); "</pre>";
-		//$n->dt_criacao = 		date("Y-m-d H:i:s");
-		//$e->id_ent       = $_data['id_ent'];
-		$this->ativo        = $_data['ativo'];
-		$this->nome_ent     = $_data['nome_ent'];
-		$this->login_ent    = $_data['login_ent'];
-		$this->senha_ent    = $_data['senha_ent'];
-		$this->cpf_cnpj_ent = $_data['cpf_cnpj_ent'];
-		$this->dt_nasc_ent  = $_data['dt_nasc_ent'];
-		$this->tipo_ent     = $_data['tipo_ent'];
-		return $this->save();
-		//echo "<print>"; print_r($e->id); echo "</pre>";
+		$n = new Entidades();
+		pre($_data);
+		$n->dt_criacao = 		date("Y-m-d H:i:s");
+		return $n->save($_data);
 	}
 }
 
