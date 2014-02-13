@@ -93,3 +93,26 @@ create table news_letters(
 	email varchar(255) not null,
 	dt_criacao datetime not null
 )engine=MYiSAM;
+
+
+create table enderecos_temps(
+	id_end_temp int UNSIGNED AUTO_INCREMENT  PRIMARY KEY NOT NULL,
+	rua_end_temp text not null,
+	num_end_temp varchar(25) not null,
+	complemento_end_temp text not null,
+	bairro_end_temp text not null,
+	cidade_end_temp text not null,
+	cep_end_temp varchar(9) not null,
+	id_ent int not null,
+	foreign key(id_ent) references entidades(id_ent)
+)engine=MYiSAM;
+
+create table veiculos_temps(
+	id_vei int UNSIGNED AUTO_INCREMENT  PRIMARY KEY NOT NULL,
+	placa_vei char(8) not null,
+	ano_vei year not null,
+	mod_vei text not null,
+	fabricante_vei text not null,
+	id_ent int not null,
+	foreign key(id_ent) references entidades(id_ent)
+)engine=MYiSAM;
