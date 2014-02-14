@@ -31,15 +31,17 @@ class Entidades extends CI_Controller{
 	}
 
 	function do_upload($id){
+
 		$config['upload_path'] = './././resources/img/'.$id;
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '100';
 		$config['max_width']  = '1024';
 		$config['max_height']  = '768';
+		
+		$this->upload->initialize($config);
 
-		$this->load->library('upload', $config);
 
-			echo "<pre>"; print_r($_DATA); echo "</pre>";
+			echo "<pre>"; print_r($this->upload->data()); echo "</pre>";
 		if ( ! $this->upload->do_upload()){
 			$error = array('error' => $this->upload->display_errors());
 
