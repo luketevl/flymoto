@@ -5,10 +5,10 @@ class Entidades extends CI_Controller{
 
 	public function index(){
 		$e = new Entidade();
-		$end = new Enderecos_Temp();
+		//$end = new Enderecos_Temp();
 		$vei = new Veiculos_Temp();
 
-		$retorno = array_merge((array)$e->stored, (array)$end->stored,(array)$vei->stored);
+		$retorno = array_merge((array)$e->stored,(array)$vei->stored);
 		$retorno['descricao_cont_tel']='';
 		$retorno['descricao_cont_cel']='';
  		$this->parser->parse('cadastros/entidades',$retorno); 
@@ -16,20 +16,22 @@ class Entidades extends CI_Controller{
 	public function custom_form(){
 		$_data = $this->input->post();
 		$e = new Entidade();
-		$end = new Enderecos_Temp();
+		//$end = new Enderecos_Temp();
 		$vei = new Veiculos_Temp();
 		
-		echo "<pre>"; print_r($this->upload->data()); "</pre>";
+		//echo "<pre>"; print_r($this->upload->data()); "</pre>";
 		if($e->salvar($_data)){
 			$_data['id_ent']        = $e->id;
-			$this->do_upload($_data['id_ent']);
-			$end->salvar($_data);
-			$vei->salvar($_data);
+			echo "<pre>"; print_r($e->id); "</pre>";
+			$this->login->criarSessao($e);
+			//$this->do_upload($_data['id_ent']);
+			//$end->salvar($_data);
+			//$vei->salvar($_data);
 		}
 		
 		//-$this->parser->parse('cadastros/entidade',array());
 	}
-
+/*
 	function do_upload($id){
 
 		$config['upload_path'] = './././resources/img/'.$id;
@@ -54,5 +56,5 @@ class Entidades extends CI_Controller{
 			//$this->load->view('upload_success', $data);
 		}
 	}
-
+*/
 }

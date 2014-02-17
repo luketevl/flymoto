@@ -6,12 +6,50 @@
 
 	<style type="text/css">
 	</style>
+	<script type="text/javascript" src="<?php echo base_url()?>resources/js/location.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>resources/js/mapa.js"></script>
 </head>
 <body>
 <?php
 	echo form_open_multipart('cadastros/entidades/custom_form','name="form"');
-	echo form_fieldset('Dados pessoais');
+	echo form_fieldset('Cadastro');
 
+	echo form_hidden('ativo','1');
+	echo form_hidden('login_ent','');
+    echo form_hidden('dt_nasc_ent','2014-02-05');	
+
+	echo form_radio('tipo_ent','M',TRUE).'Motoboy';
+	echo form_radio('tipo_ent','C').'Cliente';
+	echo "<br />";	
+	
+	echo form_label('Nome Completo');
+	echo form_input('nome_ent','{nome_ent}');
+	echo "<br />";	
+	
+	echo form_label('CPF/CNPJ');
+	echo form_input('cpf_cnpj_ent','{cpf_cnpj_ent}');
+	echo "<br />";
+	
+	echo form_label('Senha');
+	echo form_password('senha_ent','{senha_ent}');
+	echo "<br />";
+	
+	echo form_label('Confirmar Senha');
+	echo form_password('senha_ent_conf');
+	echo "<br />";
+
+	echo form_label('Telefone');
+	echo form_input('descricao_cont_tel','{descricao_cont_tel}');
+	echo "<br />";
+	
+	echo form_label('Celular');
+	echo form_input('descricao_cont_cel','{descricao_cont_cel}');
+	
+	echo form_fieldset_close();
+	echo form_submit('submit','Confirmar');
+
+/*
 	echo form_hidden('id_ent','{id_ent}');
 	echo form_hidden('ativo','{ativo}');
 	echo form_hidden('tipo_ent','{tipo_ent}');
@@ -27,10 +65,11 @@
 	echo form_label('Nome Completo');
 	echo form_input('nome_ent','{nome_ent}');
 	echo "<br />";
+
 	echo form_label('CPF/CNPJ');
 	echo form_input('cpf_cnpj_ent','{cpf_cnpj_ent}');
-	
 	echo "<br />";
+
 	echo form_label('CEP');
 	echo form_input('cep_end_temp','{cep_end_temp}');
 	
@@ -131,7 +170,7 @@
 	echo "<br />";
 	echo form_submit('submit','Confirmar');
 	echo form_fieldset_close();
-
+*/
 	echo form_close();
 ?>
 
