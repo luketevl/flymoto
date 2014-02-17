@@ -116,3 +116,29 @@ create table veiculos_temps(
 	id_ent int not null,
 	foreign key(id_ent) references entidades(id_ent)
 )engine=MYiSAM;
+
+
+
+create table localicacoes(
+	id_loci int UNSIGNED AUTO_INCREMENT  PRIMARY KEY NOT NULL,
+	longitude text not null,
+	latitude text not null,
+	id_ent int not null,
+	foreign key(id_ent) references entidades(id_ent)
+)engine=MYiSAM;
+
+
+
+create table encomendas(
+	id_enc int UNSIGNED AUTO_INCREMENT  PRIMARY KEY NOT NULL,
+	longitude_cli text not null,
+	latitude_cli text not null,
+	longitude_enco text not null,
+	latitude_enco text not null,
+	dt_criacao_enco datetime not null,
+	id_ent int not null,
+	foreign key(id_ent) references entidades(id_ent)
+	id_ent_motoboy int not null,
+	foreign key(id_ent_motoboy) references entidades(id_ent)
+)engine=MYiSAM;
+

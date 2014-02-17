@@ -1,4 +1,2 @@
-INDEX VERSION 1.126+D:\Programas\Server\xampplite\htdocs\flymoto\android\.metadata\.plugins\org.eclipse.jdt.core
-1968753194.index
-413167192.index
-2410357279.index
+INDEX VERSION 1.126+/Library/WebServer/Documents/flymoto/android/.metadata/.plugins/org.eclipse.jdt.core
+981465131.index

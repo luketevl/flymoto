@@ -140,7 +140,11 @@ class Entidade extends DataMapper {
 		return $this->save();
 		//echo "<print>"; print_r($e->id); echo "</pre>";
 	}
-}
 
+	public function verificar_login($login, $senha){
+		return $this->where('cpf_cnpj_ent',$login)->where('senha_ent',$senha)->get();
+	}
+
+}
 /* End of file template.php */
 /* Location: ./application/models/template.php */
