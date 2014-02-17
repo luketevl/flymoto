@@ -19,6 +19,9 @@ create table tipo_endereco_contatos(
 	editavel_tip char(1)
 )engine=MYiSAM;
 
+insert into tipo_endereco_contatos values(1,'Telefone','T','0');
+insert into tipo_endereco_contatos values(2,'Celular','T','0');
+
 create table contatos(
 	id_cont int UNSIGNED AUTO_INCREMENT  PRIMARY KEY NOT NULL,
 	descricao_cont text not null,
@@ -127,8 +130,6 @@ create table localicacoes(
 	foreign key(id_ent) references entidades(id_ent)
 )engine=MYiSAM;
 
-
-
 create table encomendas(
 	id_enc int UNSIGNED AUTO_INCREMENT  PRIMARY KEY NOT NULL,
 	longitude_cli text not null,
@@ -137,7 +138,7 @@ create table encomendas(
 	latitude_enco text not null,
 	dt_criacao_enco datetime not null,
 	id_ent int not null,
-	foreign key(id_ent) references entidades(id_ent)
+	foreign key(id_ent) references entidades(id_ent),
 	id_ent_motoboy int not null,
 	foreign key(id_ent_motoboy) references entidades(id_ent)
 )engine=MYiSAM;

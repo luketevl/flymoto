@@ -35,7 +35,7 @@ class Encomenda extends DataMapper {
 	// --------------------------------------------------------------------
 
 	// Insert related models that Template can have just one of.
-	//var $has_one = array('enderecos_temp','veiculos_temp');
+	var $has_one = array('enderecos_temp','veiculos_temp');
 
 	// Insert related models that Template can have more than one of.
 	//var $has_many = array();
@@ -139,6 +139,14 @@ class Encomenda extends DataMapper {
 		$this->id_ent_motoboy    = $_data['id_ent_motoboy'];
 		return $this->save();
 		//echo "<print>"; print_r($e->id); echo "</pre>";
+	}
+
+	public function getEncomendas($_data){
+		/*$this->get();
+		$e = new Entidade();
+		return $e->where_related($this->get());*/
+		return $this->db->query('select * from entidades join encomendas where encomendas.id_ent = entidades.id_ent')->result();
+		//return $this->db->get()->result();
 	}
 
 }
