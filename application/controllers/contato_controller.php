@@ -1,7 +1,7 @@
 <?php
 
 
-class Contato extends CI_Controller{
+class Contato_Controller extends CI_Controller{
 
 	public function index(){
 		$c = new Contato();

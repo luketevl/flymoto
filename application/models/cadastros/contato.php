@@ -130,10 +130,17 @@ class Contato extends DataMapper {
 //		echo "<pre>"; print_r(				array_merge((array)$n->stored, $_data)); "</pre>";
 		//$n->dt_criacao = 		date("Y-m-d H:i:s");
 		//$e->id_cont       = $_data['id_cont'];
-		$this->descricao_cont        = $_data['descricao_cont'];
-		$this->id_ent    = $_data['id_ent'];
-		$this->id_tip    = $_data['id_tip'];
-		return $this->save();
+		$this->descricao_cont        = $_data['descricao_cont_tel'];
+		$this->id_ent                = $_data['id_ent'];
+		$this->id_tip                = 1;
+		$this->save();
+
+		$c = new Contato();
+		
+		$c->descricao_cont        = $_data['descricao_cont_cel'];
+		$c->id_ent                = $_data['id_ent'];
+		$c->id_tip                = 2;
+		$c->save();
 		//echo "<print>"; print_r($e->id); echo "</pre>";
 	}
 
