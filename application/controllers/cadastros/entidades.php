@@ -7,6 +7,7 @@ class Entidades extends CI_Controller{
 		$e = new Entidade();
 		//$end = new Enderecos_Temp();
 		$vei = new Veiculos_Temp();
+		$c = new Contato();
 
 		$retorno = array_merge((array)$e->stored,(array)$vei->stored);
 		$retorno['descricao_cont_tel']='';
@@ -22,6 +23,8 @@ class Entidades extends CI_Controller{
 		//echo "<pre>"; print_r($this->upload->data()); "</pre>";
 		if($e->salvar($_data)){
 			$_data['id_ent']        = $e->id;
+			$c = new Contato();
+			$c->salvar($_data);
 			echo "<pre>"; print_r($e->id); "</pre>";
 			$this->login->criarSessao($e);
 			//$this->do_upload($_data['id_ent']);
