@@ -141,7 +141,7 @@ class Encomenda extends DataMapper {
 		//echo "<print>"; print_r($e->id); echo "</pre>";
 	}
 
-	public function getEncomendas($_data){
+	public function getEncomendas(){
 		/*$this->get();
 		$e = new Entidade();
 		return $e->where_related($this->get());*/

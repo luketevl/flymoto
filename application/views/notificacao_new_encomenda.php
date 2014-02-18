@@ -1,3 +1,20 @@
+ <script type="text/javascript" src="<?php echo base_url()?>resources/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var tempo = window.setInterval(carrega, 9000);
+		var valor_txt;
+		function carrega(){
+			alert("doido");
+			$('#new_encomenda').load("encomenda_controller");
+		}
+		$('input[name="vr_proposta"]').focusin(function(){
+			window.clearInterval(tempo);
+		});
+		$('input[name="vr_proposta"]').focusout(function(){
+			//tempo = window.setInterval(carrega, 1000);
+		});	
+	});
+</script>
 <section id="new_encomenda">
 	{encomendas}
 	<?php 
@@ -12,7 +29,7 @@
 		Feita por: <a href="#">{nome_ent}</a>
 			<summary>
 				<p>
-					Telefone: xxxxx
+					Telefone: {descricao_cont}
 					CPF/CNPJ: {cpf_cnpj_ent}
 				</p>
 			</summary>
