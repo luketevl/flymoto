@@ -15,6 +15,5 @@ class Encomenda_Controller extends CI_Controller{
 
 	public function enviar_proposta(){
 		$_data = $this->input->post();
-		
 	}
 }

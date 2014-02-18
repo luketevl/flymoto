@@ -1,0 +1,39 @@
+header{
+
+	background-color: red;
+	width: 100%;
+	height: 203px;
+	max-height: 203px;
+}
+
+footer{
+	display: block;
+	clear:both;
+	background-color: black;
+
+}
+
+#notification_encomenda{
+	float:right;
+	background-color: yellow;
+	width: 38%;
+}
+
+#localizacao_atual{
+	float:left;
+	background-color: pink;
+}
+
+#centro{
+	width: 100%;
+	display: block;
+	clear: both;
+	margin-top: 24px;
+}
+
+#sessao-json{
+	float:left;
+	width: 60%;
+	min-height: 20px;
+	background-color: red;
+}

@@ -9,6 +9,10 @@ $(document).ready(function(){
 */
         $('input[name="latitude_cli"]').val(position.coords.latitude);
         $('input[name="longitude_cli"]').val(position.coords.longitude);
+
+            $.getJSON("http://maps.google.com/maps/api/geocode/json?address="+position.coords.latitude +","+position.coords.longitude+"&sensor=false",function(result){
+                $("#str-endereco").append(result[0] + " ");
+            });
 }
 
 function error(msg) {
