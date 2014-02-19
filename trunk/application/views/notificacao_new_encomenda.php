@@ -1,4 +1,3 @@
- <script type="text/javascript" src="<?php echo base_url()?>resources/js/jquery.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		//var tempo = window.setInterval(carrega, 10000);
@@ -25,6 +24,9 @@
 		<?php 
 			echo form_open('encomenda_controller/enviar_proposta');
 			echo form_hidden('id_ent','{id_ent}');
+			echo form_hidden('longitude_cli','{longitude_cli}');
+            echo form_hidden('latitude_cli','{latitude_cli}');
+            echo form_hidden('id_ent_motoboy','{id_logado}');
 		?>
 		<h2>
 			Nova Encomenda 

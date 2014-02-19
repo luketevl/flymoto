@@ -6,9 +6,9 @@
 
 	<style type="text/css">
 	</style>
-	<script type="text/javascript" src="<?php echo base_url()?>resources/js/location.js"></script>
+	<!-- <script type="text/javascript" src="<?php echo base_url()?>resources/js/location.js"></script>
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-	<script type="text/javascript" src="<?php echo base_url()?>resources/js/mapa.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>resources/js/mapa.js"></script> -->
 </head>
 <body>
 <?php

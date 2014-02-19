@@ -88,6 +88,9 @@ $(document).ready(function () {
 			marker.setPosition(location);
 			map.setCenter(location);
 			map.setZoom(16);
+			$.getJSON("http://maps.google.com/maps/api/geocode/json?address="+ui.item.latitude +","+ui.item.longitude+"&sensor=false",function(result){
+                $("#str-endereco").html("Seu endereço é: " +result.results[0].formatted_address);
+            });
 		}
 	});
 	

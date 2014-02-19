@@ -34,11 +34,11 @@ h1 {
 	color: #f0f0f0; 
 	cursor: pointer; 
 	display: block; 
-	height: 20px; 
+	height: 32px; 
 	float: left; 
 	font: 15px 'Open Sans',Arial;
 	padding: 7px 13px;
-	width: 70px;
+	width: 91px;
 }
 
 .campos input[type="text"] { 
@@ -52,7 +52,7 @@ h1 {
 	width: 474px; 
 }
 
-.campos input[type="button"] { 
+input[type="button"], input[type="submit"] { 
 	background: #2679A5; 
 	border-radius: 0 6px 6px 0;
     color: #FFF;
@@ -69,7 +69,7 @@ h1 {
     transition: background .2s ease-in;
 }
 
-.campos input[type="button"]:hover { background: #12587C }
+input[type="button"]:hover ,  input[type="submit"]{ background: #12587C }
 
 #mapa { 
 	width: 940px;
@@ -79,10 +79,14 @@ h1 {
 }
 
 #txtEndereco{
+	height: 34px;
+}
+input[type=text]{
 	border-style: solid;
 	border-color: #ccc;
 	border-width: 1px;
-
+	height: 20px;
+	}
 }
 
 input[type="submit"] {

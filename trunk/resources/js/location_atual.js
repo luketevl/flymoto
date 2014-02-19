@@ -7,11 +7,11 @@ $(document).ready(function(){
         return;
     }
 */
-        $('input[name="latitude_cli"]').val(position.coords.latitude);
-        $('input[name="longitude_cli"]').val(position.coords.longitude);
+        $('#camposEscondidos input[name="latitude_cli_entra"]').val(position.coords.latitude);
+        $('#camposEscondidos input[name="longitude_cli_entra"]').val(position.coords.longitude);
 
             $.getJSON("http://maps.google.com/maps/api/geocode/json?address="+position.coords.latitude +","+position.coords.longitude+"&sensor=false",function(result){
-                $("#str-endereco").append(result[0] + " ");
+                 $("#str-endereco").html("Seu endereço é: " +result.results[0].formatted_address);
             });
 }
 
