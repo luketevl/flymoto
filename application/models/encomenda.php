@@ -145,7 +145,7 @@ class Encomenda extends DataMapper {
 		/*$this->get();
 		$e = new Entidade();
 		return $e->where_related($this->get());*/
-		return $this->db->query('select * from entidades join encomendas join contatos where encomendas.id_ent = entidades.id_ent and contatos.id_ent = entidades.id_ent')->result();
+		return $this->db->query('select * from entidades join encomendas join contatos where encomendas.id_ent = entidades.id_ent and contatos.id_ent = entidades.id_ent group by id_enc')->result();
 		//return $this->db->get()->result();
 	}
 

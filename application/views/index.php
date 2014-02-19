@@ -86,6 +86,9 @@
 			</li>
 			<li>
 				<a href="#">
+				<?php
+ 					echo form_hidden('url','opcoes');
+				?>
 					<span class="icon">
 						<i aria-hidden="true" class="icon-blog"></i>
 					</span>
