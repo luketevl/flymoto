@@ -12,8 +12,8 @@
 	
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>resources/css/style_fly.css">
 	<!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>resources/css/style.css"> 
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>resources/css/estilo.css">
 	-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>resources/css/estilo.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>resources/css/default.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>resources/css/component.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>resources/css/progressjs.min.css">
@@ -30,8 +30,26 @@
 	<script type="text/javascript" src="<?php echo base_url()?>resources/js/progress.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>resources/js/my_functions.js"></script>
 
+
 </head>
 <body>
+
+   <script type="text/javascript" src="<?php echo base_url()?>resources/js/jquery-ui.custom.min.js"></script>
+
+    <!-- Maps API Javascript -->
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    
+    <!-- Caixa de informação -->
+    <script type="text/javascript" src="<?php echo base_url()?>resources/js/infobox.js"></script>
+    
+    <!-- Agrupamento dos marcadores -->
+   <script type="text/javascript" src="<?php echo base_url()?>resources/js/markerclusterer.js"></script>
+
+    <!-- Arquivo de inicialização do mapa 
+
+    <script type="text/javascript" src="<?php echo base_url()?>resources/js/mapa.js"></script>
+    -->
+    <script type="text/javascript" src="<?php echo base_url()?>resources/js/mapa_search.js"></script>
 
 <header>
 	<nav id="menu" class="nav">					
@@ -45,7 +63,10 @@
 				</a>
 			</li>
 			<li>
-				<a href="cadastros/entidades">
+				<a href="#">
+				<?php
+ 					echo form_hidden('url','cadastros/entidades');
+				?>
 					<span class="icon"> 
 						<i aria-hidden="true" class="icon-team"></i>
 					</span>
@@ -53,7 +74,10 @@
 				</a>
 			</li>
 			<li>
-				<a href="solicitar_motoboy">
+				<a href="#">
+				<?php
+ 					echo form_hidden('url','solicitar_motoboy');
+				?>
 					<span class="icon">
 						<i aria-hidden="true" class="icon-portfolio"></i>
 					</span>
@@ -87,20 +111,20 @@
 		</ul>
 	</nav>
 </header>
+<div id="camposEscondidos">
+<input type="hidden" name="latitude_cli_entra" />
+<input type="hidden" name="longitude_cli_entra" />
+</div>
 <section id="centro">
 
 <section id="sessao-json">
-	
-	<section id="localizacao_atual">
-	    <article>
-	        <p><span id="status">Seu endereço é:</span> <span id="str-endereco"><span></p>
-	        <input type="button" name="btn_corrigir" value="Corrigir Localização" />
-		    <?php
-			    echo form_hidden('longitude_cli');
-	            echo form_hidden('latitude_cli');
-            ?>
-	    </article>
-	 </section>
+	<?php
+
+		$this->load->view('localizacao_atual');
+	?>
+	<section id="troca">
+		
+	</section>
 
 </section>
 

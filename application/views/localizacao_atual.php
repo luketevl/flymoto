@@ -1,20 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Title pagina</title>
+<section id="localizacao_atual">
+	<div style="display:none;">
+		<p><span id="str-endereco"><span></p>
+	</div>
+	<input type="button" name="btn_corrigir" value="Corrigir Minha Localização" style="margin-top:5px; margin-bottom:9px;" />
+	    <article>
+	        <fieldset>
+                    <div class="campos">
+                        <label for="txtEndereco">Endereço:</label>
+                        <?php
+                            echo form_input('txtEndereco','',"id='txtEndereco'");
+                        ?>
+                        <input type="button" id="btnEndereco" name="btnEndereco" value="Mostrar no mapa" />
+                    </div>
+                  <!--  <input type="hidden" id="txtLatitude" name="txtLatitude" />
+                    <input type="hidden" id="txtLongitude" name="txtLongitude" />
+-->
+                </fieldset>
+                  <div id="mapa" style="height: 500px; width: 700px">
+		    <?php
+			    //echo form_hidden('longitude_cli');
+	            //echo form_hidden('latitude_cli');
+            ?>
+	    </article>
+	 </section>
+	 <script>
+	 $(document).ready(function(){
+ 	 	$('input[name="btn_corrigir"]').click(function(){
+ 	 		$('#localizacao_atual > div').toggle();
+ 	 	}); 	
 
-	<style type="text/css">
-	</style>
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-	<script type="text/javascript" src="<?php echo base_url()?>resources/js/location.js"></script>
-	<script type="text/javascript" src="<?php echo base_url()?>resources/js/mapa.js"></script>
-</head>
 
-<section>
-    <article>
-        <p><span id="status">Aguarde estamos localizando você ;)</span></p>
-    </article>
- </section>
-<body>
-</html>
+
+	 });
+
+	 </script>

@@ -7,6 +7,7 @@ class Encomenda_Controller extends CI_Controller{
 		$e = new Encomenda();
 		$encomendas = array();
 		$encomendas['encomendas'] = $e->getEncomendas() ;
+		$encomendas['id_logado'] = $this->session->userdata('id_ent');
 		//echo $e->getEncomendas($_data);
 	//	echo "<pre>"; echo print_r($encomendas); echo "</pre>";
 //		echo "<pre>"; echo print_r($encomendas); echo "</pre>";
