@@ -15,6 +15,7 @@ class Entidades extends CI_Controller{
  		$this->parser->parse('cadastros/entidades',$retorno); 
 	}
 	public function custom_form(){
+
 		$_data = $this->input->post();
 		$e = new Entidade();
 		//$end = new Enderecos_Temp();
@@ -34,6 +35,8 @@ class Entidades extends CI_Controller{
 			//$end->salvar($_data);
 			//$vei->salvar($_data);
 		}
+
+		verifica_acesso($_data['id_ent'],$this->session->userdata('tipo_ent'));
 		
 		//-$this->parser->parse('cadastros/entidade',array());
 	}

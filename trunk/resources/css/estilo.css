@@ -23,7 +23,6 @@ h1 {
 }
 
 .campos {
-	width: 740px; 
 	margin: 0 auto 15px; 
 	overflow: hidden; 
 }
@@ -41,11 +40,15 @@ h1 {
 	width: 91px;
 }
 
-.campos input[type="text"] { 
-	background: #FFF;
-	color: #666;
+.campos input[type="text"] {
 	display: block;
 	float: left;
+ }
+
+input[type="text"],input[type="password"] { 
+
+	background: #FFF;
+	color: #666;
 	font: 15px 'Open Sans',Arial; 
 	height: 14px;
 	padding: 9px;
@@ -78,10 +81,15 @@ input[type="button"]:hover ,  input[type="submit"]{ background: #12587C }
 	margin-bottom: 20px;
 }
 
+
+#sessao-json > article, #sessao-json > section, #sessao-json > div{
+	width: initial;
+}
 #txtEndereco{
 	height: 34px;
+	width: 61%;
 }
-input[type=text]{
+input[type=text], input[type=password]{
 	border-style: solid;
 	border-color: #ccc;
 	border-width: 1px;

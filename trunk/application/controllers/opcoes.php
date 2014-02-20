@@ -11,7 +11,7 @@ class Opcoes extends CI_Controller{
 	public function custom_form(){
 		$_data = $this->input->post();
 		$_data['id_ent'] = $this->session->userdata('id_ent');
-		$o = new Opcoe();
+		$o = new Opcoe($_data['id_ent']);
 		if($o->salvar($_data)){
 			echo "cadastrado";
 		}

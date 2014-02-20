@@ -129,11 +129,14 @@ class Opcoe extends DataMapper {
 		//$e = new Entidade();
 //		echo "<pre>"; print_r(				array_merge((array)$n->stored, $_data)); "</pre>";
 		//$n->dt_criacao = 		date("Y-m-d H:i:s");
-		//$this->id_opc            = $_data['id_opc'];
+		$this->id_opc         = $_data['id_opc'];
 		$this->id_ent         = $_data['id_ent'];
 		$this->vr_por_km      = $_data['vr_por_km'];
 		return $this->save();
 		//echo "<print>"; print_r($e->id); echo "</pre>";
+	}
+	public function getVrKm($id){
+		return $this->where('id_ent',$id)->get();
 	}
 
 }

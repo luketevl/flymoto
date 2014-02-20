@@ -16,11 +16,11 @@
 	echo form_fieldset('Login');
 
 	echo form_label('CPF/CNPJ');
-	echo form_input('cpf_cnpj_ent','{cpf_cnpj_ent}');
+	echo form_input('cpf_cnpj_ent');
 	echo "<br />";
 	
 	echo form_label('Senha');
-	echo form_password('senha_ent','{senha_ent}');
+	echo form_password('senha_ent');
 	echo "<br />";
 	
 	echo form_fieldset_close();
