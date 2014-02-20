@@ -32,7 +32,7 @@ footer{
 #localizacao_atual{
 	float:left;
 	/* background-color: pink; */
-	width: 100%;
+	max-width: 100%
 }
 
 #centro{

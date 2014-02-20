@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Title pagina</title>
-
-	<style type="text/css">
-	</style>
-	<!-- <script type="text/javascript" src="<?php echo base_url()?>resources/js/location.js"></script>
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-	<script type="text/javascript" src="<?php echo base_url()?>resources/js/mapa.js"></script> -->
-</head>
-<body>
 <?php
 	echo form_open_multipart('cadastros/entidades/custom_form','name="form"');
 	echo form_fieldset('Cadastro');
@@ -173,8 +160,3 @@
 */
 	echo form_close();
 ?>
-
-
-
-</body>
-</html>

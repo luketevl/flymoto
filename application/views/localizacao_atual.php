@@ -2,7 +2,7 @@
 	<div style="display:none;">
 		<p><span id="str-endereco"><span></p>
 	</div>
-	<input type="button" name="btn_corrigir" value="Corrigir Minha Localização" style="margin-top:5px; margin-bottom:9px;" />
+	<input type="button" name="btn_corrigir" value="Minha Localização" style="margin-top:5px; margin-bottom:9px;" />
 	    <article>
 	        <fieldset>
                     <div class="campos">

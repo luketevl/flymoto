@@ -52,7 +52,7 @@ $.getJSON("http://maps.google.com/maps/api/geocode/json?address="+position.coord
 			<br />
 			Proposta: 
 			<?php
-				echo form_input('vr_proposta','0.00');
+				echo form_input('vr_proposta','{vr_medio}');
 				echo form_submit('enviar','Enviar Proposta');
 			?>
 		</p>

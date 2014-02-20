@@ -4,6 +4,7 @@
 class Login_Controller extends CI_Controller{
 
 	public function index(){
+		verifica_acesso($this->session->userdata('id_ent'),$this->session->userdata('tipo_ent'));
 		$e = new Entidade();
  		$this->parser->parse('login',(array)$e->stored); 
 	}
@@ -13,14 +14,9 @@ class Login_Controller extends CI_Controller{
 		$e = new Entidade();
 		$temp = $e->verificar_login($_data['cpf_cnpj_ent'], $_data['senha_ent']);
 		if(!empty($temp->stored->id_ent)){
-			echo "logou";
 			$this->login->criarSessao($e);
-			$this->parser->parse('index',(array)$e->stored);
+		//	$this->parser->parse('index',(array)$e->stored);
 		}
-		else{
-			echo "n logou";
- 			$this->parser->parse('login',(array)$e->stored); 
-		}
-
+		verifica_acesso($temp->stored->id_ent,$e->stored->tipo_ent);
 	}
 }

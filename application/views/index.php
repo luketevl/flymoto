@@ -55,7 +55,7 @@
 	<nav id="menu" class="nav">					
 		<ul>
 			<li>
-				<a href="#">
+				<a href="#" id="inicio">
 					<span class="icon">
 						<i aria-hidden="true" class="icon-home"></i>
 					</span>
@@ -104,7 +104,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="site/landing_page">
+				<a href="site/landing_page#cadastro">
 					<span class="icon">
 						<i aria-hidden="true" class="icon-contact"></i>
 					</span>
