@@ -9,6 +9,17 @@ $(document).ready(function(){
 */
         $('#camposEscondidos input[name="latitude_cli_entra"]').val(position.coords.latitude);
         $('#camposEscondidos input[name="longitude_cli_entra"]').val(position.coords.longitude);
+        
+        $.ajax({
+          type: "GET",
+          url: "login_controller/atualizarLocalizacao",
+          data: { latitude: position.coords.latitude, longitude: position.coords.longitude }
+        })
+          .done(function( msg ) {
+          //  alert( "Data Saved: " + msg );
+         // alert(position.coords.latitude);
+           //  location.reload(); 
+          });
 
             $.getJSON("http://maps.google.com/maps/api/geocode/json?address="+position.coords.latitude +","+position.coords.longitude+"&sensor=false",function(result){
                  $("#str-endereco").html("Seu endereço é: " +result.results[0].formatted_address);

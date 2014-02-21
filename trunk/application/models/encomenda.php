@@ -127,7 +127,7 @@ class Encomenda extends DataMapper {
 	*/
 	public function salvar($_data){
 		//$e = new Entidade();
-//		echo "<pre>"; print_r(				array_merge((array)$n->stored, $_data)); "</pre>";
+		//echo "<pre>"; print_r($_data); "</pre>";
 		//$n->dt_criacao = 		date("Y-m-d H:i:s");
 		//$this->id_enc            = $_data['id_enc'];
 		$this->longitude_cli     = $_data['longitude_cli'];
@@ -136,7 +136,7 @@ class Encomenda extends DataMapper {
 		$this->latitude_enco     = $_data['txtLatitude'];
 		$this->dt_criacao_enco   = date('Y-m-d h:m:i');
 		$this->id_ent          	 = $_data['id_ent'];
-		$this->id_ent_motoboy    = $_data['id_ent_motoboy'];
+		$this->id_ent_motoboy    = 0;
 		return $this->save();
 		//echo "<print>"; print_r($e->id); echo "</pre>";
 	}
@@ -145,7 +145,15 @@ class Encomenda extends DataMapper {
 		/*$this->get();
 		$e = new Entidade();
 		return $e->where_related($this->get());*/
-		return $this->db->query('select * from entidades join encomendas join contatos where encomendas.id_ent = entidades.id_ent and contatos.id_ent = entidades.id_ent group by id_enc')->result();
+		return $this->db->query('select encomendas.* , entidades.* , contatos.* from entidades join encomendas on encomendas.id_ent = entidades.id_ent left join propostas on propostas.id_enc = encomendas.id_enc left join contatos on contatos.id_ent = entidades.id_ent group by contatos.id_ent;')->result();
+		//return $this->db->get()->result();
+	}
+
+	public function getEncomendasById($id){
+		/*$this->get();
+		$e = new Entidade();
+		return $e->where_related($this->get());*/
+		return $this->db->query("select encomendas.*, entidades.*, contatos.* FROM entidades JOIN encomendas ON encomendas.id_ent = entidades.id_ent LEFT JOIN propostas ON propostas.id_enc = encomendas.id_enc LEFT JOIN contatos ON contatos.id_ent = entidades.id_ent where propostas.id_enc IS NULL or propostas.id_ent_motoboy !=" . $id ." GROUP BY encomendas.id_enc;")->result();
 		//return $this->db->get()->result();
 	}
 

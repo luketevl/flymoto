@@ -19,4 +19,9 @@ class Login_Controller extends CI_Controller{
 		}
 		verifica_acesso($temp->stored->id_ent,$e->stored->tipo_ent);
 	}
+
+	public function atualizarLocalizacao(){
+		$this->session->set_userdata('latitude_atual',$_GET['latitude']);
+		$this->session->set_userdata('longitude_atual',$_GET['longitude']);
+	}
 }
