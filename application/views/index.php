@@ -7,7 +7,7 @@
 	<meta name="description" content="Responsive Retina-Friendly Menu with different, size-dependent layouts" />
 	<meta name="keywords" content="responsive menu, retina-ready, icon font, media queries, css3, transition, mobile" />
 	<meta name="author" content="Codrops" />
-	<title>Title pagina</title>
+	<title>Bem Vindo - FlyMoto</title>
 	<script type="text/javascript" src="<?php echo base_url()?>resources/js/jquery.min.js"></script>
 	
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>resources/css/style_fly.css">
@@ -28,6 +28,7 @@
 	<script type="text/javascript" src="<?php echo base_url()?>resources/js/mapa.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>resources/js/modernizr.custom.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>resources/js/progress.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>resources/js/jquery.noty.packaged.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>resources/js/my_functions.js"></script>
 
 
@@ -117,6 +118,10 @@
 <div id="camposEscondidos">
 <input type="hidden" name="latitude_cli_entra" id="latitude_cli_entra" />
 <input type="hidden" name="longitude_cli_entra" id="longitude_cli_entra" />
+<?php 
+//	<input type="hidden" name="usa_sessao" id="longitude_cli_entra" />
+
+?>
 </div>
 <section id="centro">
 

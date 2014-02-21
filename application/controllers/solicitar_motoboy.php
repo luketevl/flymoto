@@ -10,6 +10,8 @@ class Solicitar_Motoboy extends CI_Controller{
 	}
 	public function custom_save(){
 		$_data = $this->input->post();
+		//echo "<print>"; print_r($_data); echo "</pre>";
+		$_data['id_ent'] =  $this->session->userdata['id_ent'];
 		$e = new Encomenda();
 		if($e->salvar($_data)){
 			echo "cadastrado";

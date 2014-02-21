@@ -19,6 +19,7 @@
 $.getJSON("http://maps.google.com/maps/api/geocode/json?address="+position.coords.latitude +","+position.coords.longitude+"&sensor=false",function(result){
                  $("#str-endereco").html("Seu endereço é: " +result.results[0].formatted_address);
             });
+	
 	});
 </script>
 <section id="notification_encomenda">
@@ -27,6 +28,7 @@ $.getJSON("http://maps.google.com/maps/api/geocode/json?address="+position.coord
 		{encomendas}
 		<?php 
 			echo form_open('encomenda_controller/enviar_proposta','name="formEncomenda"');
+			echo form_hidden('id_enc','{id_enc}');
 			echo form_hidden('id_ent','{id_ent}');
 			echo form_hidden('longitude_cli','{longitude_cli}');
             echo form_hidden('latitude_cli','{latitude_cli}');
@@ -53,8 +55,9 @@ $.getJSON("http://maps.google.com/maps/api/geocode/json?address="+position.coord
 			Proposta: 
 			<?php
 				echo form_input('vr_proposta','{vr_medio}');
-				echo form_submit('enviar','Enviar Proposta');
+				//echo form_submit('enviar','Enviar Proposta');
 			?>
+			<input type="button" name="enviarProposta" id="enviarProposta" value="Enviar Proposta" />
 		</p>
 		<?php
 			echo form_close();

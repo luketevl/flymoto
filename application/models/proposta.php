@@ -19,7 +19,7 @@
  * @author		Phil DeJarnett
  * @link		http://www.overzealous.com
  */
-class Opcoe extends DataMapper {
+class Proposta extends DataMapper {
 
 	// Uncomment and edit these two if the class has a model name that
 	//   doesn't convert properly using the inflector_helper.
@@ -127,16 +127,19 @@ class Opcoe extends DataMapper {
 	*/
 	public function salvar($_data){
 		//$e = new Entidade();
-		echo "<pre>"; print_r($_data); "</pre>";
+//		echo "<pre>"; print_r(				array_merge((array)$n->stored, $_data)); "</pre>";
 		//$n->dt_criacao = 		date("Y-m-d H:i:s");
-		//$this->id_opc         = $_data['id_opc'];
-		$this->id_ent         = $_data['id_ent'];
-		$this->vr_por_km      = $_data['vr_por_km'];
+		$this->dt_criacao_pro = date("Y-m-d H:i:s");
+		//$this->id_pro         = $_data['id_opc'];
+		$this->id_ent_motoboy = $_data['id_ent_motoboy'];
+		$this->id_enc         = $_data['id_enc'];
+		$this->aprovado_pro   = '0';
 		return $this->save();
 		//echo "<print>"; print_r($e->id); echo "</pre>";
 	}
-	public function getVrKm($id){
-		return $this->where('id_ent',$id)->get();
+
+	public function getAll(){
+		return $this->get();
 	}
 
 }

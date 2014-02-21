@@ -10,7 +10,6 @@ class Landing_Page extends CI_Controller{
 	public function save_news(){
 		$n = new News_Letter();
 		if($n->salvar($_POST)){
-			$this->index();
 		}
 	}
 }

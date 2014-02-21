@@ -4,8 +4,48 @@
 	<meta charset="utf-8">
 	<title></title>
 	<link rel="stylesheet" href="<?php echo base_url(); ?>resources/css/style.css" />
-	<style type="text/css">
-	</style>
+	<title>Bem Vindo - FlyMoto</title>
+
+	<script type="text/javascript" src="<?php echo base_url()?>resources/js/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<!--
+		<script type="text/javascript" src="<?php echo base_url()?>resources/js/location.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>resources/js/demo_progress.js"></script>
+	-->
+	<script type="text/javascript" src="<?php echo base_url()?>resources/js/location_atual.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>resources/js/mapa.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>resources/js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>resources/js/progress.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>resources/js/jquery.noty.packaged.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>resources/js/my_functions.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#btn_enviar').click(function(){
+			if($('.email').val() != ''){
+
+			var dados = $('form').serialize();
+		$.ajax({
+		          type: "POST",
+		          url: "landing_page/save_news",
+		          data: dados
+		          //data: { latitude: position.coords.latitude, longitude: position.coords.longitude }
+		        })
+		          .done(function( msg ) {
+					var n = noty({text: 'Obrigado, email cadastrado com sucesso.',  type: 'success'});
+		          });
+
+			}
+			else{
+				$('.email').focus();
+			}
+		});
+
+	});
+
+</script>
+
 </head>
 <body>
 	<header>
@@ -103,7 +143,7 @@
 				<input type='email' placeholder="Digite seu email ... " class="email" name="email" required="required" />
 			<?php
 				echo "<br />";
-				echo form_submit('btn_enviar','Enviar');
+				echo form_button('btn_enviar','Enviar','id="btn_enviar"');
 				
 			?>
 			</section>

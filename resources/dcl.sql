@@ -132,13 +132,25 @@ create table localicacoes(
 
 create table encomendas(
 	id_enc int UNSIGNED AUTO_INCREMENT  PRIMARY KEY NOT NULL,
-	longitude_cli text not null,
-	latitude_cli text not null,
+	longitude_cli text  null,
+	latitude_cli text  null,
 	longitude_enco text not null,
 	latitude_enco text not null,
 	dt_criacao_enco datetime not null,
 	id_ent int not null,
 	foreign key(id_ent) references entidades(id_ent),
+	id_ent_motoboy int null,
+	foreign key(id_ent_motoboy) references entidades(id_ent)
+)engine=MYiSAM;
+
+
+
+create table propostas(
+	id_pro int UNSIGNED AUTO_INCREMENT  PRIMARY KEY NOT NULL,
+	dt_criacao_pro datetime not null,
+	aprovado_pro char(1) not null,
+	id_enc int not null,
+	foreign key(id_enc) references encomendas(id_enc),
 	id_ent_motoboy int not null,
 	foreign key(id_ent_motoboy) references entidades(id_ent)
 )engine=MYiSAM;

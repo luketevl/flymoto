@@ -22,16 +22,47 @@ $(document).ready(function(){
 			$('#latitude_cli_entra').val(lat);
 			$('#longitude_cli_entra').val(log);
 
+        $.ajax({
+          type: "GET",
+          url: "login_controller/atualizarLocalizacao",
+          data: { latitude: lat, longitude: log }
+        })
+          .done(function( msg ) {
+          //  alert( "Data Saved: " + msg );
+          location.reload();
+          });
 		}
 	});
 
 	 $('input[name="btnEnviar"]').click(function(){
-        alert();
+	        alert();
             console.log($('form[name="formSolicitar"] > input[name="latitude_cli"]').val());
             $('form[name="formSolicitar"] > input[name="latitude_cli"]').val($('input[name="latitude_cli_entra"]').val());
             $('form[name="formSolicitar"] > input[name="longitude_cli"]').val($('input[name="longitude_cli_entra"]').val());
             
         });
+
+		$('input:button').click(function(){
+			if($(this).attr('id') == 'enviarProposta'){
+				var formulario = $(this).parent('form');
+				var dados = formulario.serialize();
+		        $.ajax({
+		          type: "POST",
+		          url: "encomenda_controller/enviar_proposta",
+		          data: dados
+		          //data: { latitude: position.coords.latitude, longitude: position.coords.longitude }
+		        })
+		          .done(function( msg ) {
+		          	$(formulario).hide();
+		          //  alert( "Data Saved: " + msg );
+		         // alert(position.coords.latitude);
+		           //  location.reload(); 
+		          });
+
+			}
+		});
+
+
 //or for specific element
 /* progressJs().set(80);
 progressJs("#centro").start();
