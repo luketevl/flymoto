@@ -34,6 +34,7 @@
 		        })
 		          .done(function( msg ) {
 					var n = noty({text: 'Obrigado, email cadastrado com sucesso.',  type: 'success'});
+					$('.email').val('');
 		          });
 
 			}
