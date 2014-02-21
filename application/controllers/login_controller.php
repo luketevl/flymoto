@@ -4,7 +4,7 @@
 class Login_Controller extends CI_Controller{
 
 	public function index(){
-		verifica_acesso($this->session->userdata('id_ent'),$this->session->userdata('tipo_ent'));
+		//verifica_acesso($this->session->userdata('id_ent'),$this->session->userdata('tipo_ent'), true);
 		$e = new Entidade();
  		$this->parser->parse('login',(array)$e->stored); 
 	}

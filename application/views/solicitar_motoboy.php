@@ -1,7 +1,6 @@
 <script>
     $(document).ready(function(){
-        $('input[name="latitude_cli"]').val($('input[name="latitude_cli_entra"]').val());
-        $('input[name="longitude_cli"]').val($('input[name="longitude_cli_entra"]').val());
+       
 });
 </script>
        <!-- <div id="apresentacao"> -->

@@ -115,8 +115,8 @@
 	</nav>
 </header>
 <div id="camposEscondidos">
-<input type="hidden" name="latitude_cli_entra" />
-<input type="hidden" name="longitude_cli_entra" />
+<input type="hidden" name="latitude_cli_entra" id="latitude_cli_entra" />
+<input type="hidden" name="longitude_cli_entra" id="longitude_cli_entra" />
 </div>
 <section id="centro">
 
@@ -164,3 +164,4 @@
 					}
 				}
 			</script>
+			

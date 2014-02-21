@@ -1,8 +1,11 @@
 <section id="localizacao_atual">
-	<div style="display:none;">
-		<p><span id="str-endereco"><span></p>
-	</div>
+	<?php
+		echo form_hidden('hd_latitude_atual');
+		echo form_hidden('hd_longitude_atual');
+	?>
+	<p><span id="str-endereco"><span></p>
 	<input type="button" name="btn_corrigir" value="Minha Localização" style="margin-top:5px; margin-bottom:9px;" />
+	<input type="button" name="btn_modificar" value="Corrigir Localização" style="margin-top:5px; margin-bottom:9px;" id="esconde" />
 	    <article>
 	        <fieldset>
                     <div class="campos">
@@ -25,11 +28,6 @@
 	 </section>
 	 <script>
 	 $(document).ready(function(){
- 	 	$('input[name="btn_corrigir"]').click(function(){
- 	 		$('#localizacao_atual > div').toggle();
- 	 	}); 	
-
-
 
 	 });
 

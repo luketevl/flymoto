@@ -27,14 +27,16 @@
 */
 if ( ! function_exists('verifica_acesso')){
 	
-	function verifica_acesso($id , $tipo){
+	function verifica_acesso($id , $tipo , $inicio = false){
 		if(empty($id) || $id == '{id_ent}'){
 			$config['url_retorno'] = 'login';
 			 redirect("login_controller");
 		}
 		else{
-			 redirect("inicio","refresh");
+			if(!$inicio){
+			 	redirect("inicio","refresh");
 			}
+		}
 			if($tipo == 'M'){
 				
 			}
