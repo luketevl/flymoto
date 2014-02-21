@@ -35,7 +35,9 @@ $(document).ready(function () {
 		
 					$('#txtEndereco').val(results[0].formatted_address);
 					$('#txtLatitude').val(latitude);
+					$('input[name="hd_latitude_atual"]').val(latitude);
                    	$('#txtLongitude').val(longitude);
+                   	$('input[name="hd_longitude_atual"]').val(longitude);
 		
 					var location = new google.maps.LatLng(latitude, longitude);
 					marker.setPosition(location);
@@ -47,6 +49,7 @@ $(document).ready(function () {
 	}
 	
 	$("#btnEndereco").click(function() {
+		$('#mapa').show();
 		if($(this).val() != "")
 			carregarNoMapa($("#txtEndereco").val());
 	})
@@ -62,7 +65,9 @@ $(document).ready(function () {
 				if (results[0]) {  
 					$('#txtEndereco').val(results[0].formatted_address);
 					$('#txtLatitude').val(marker.getPosition().lat());
+					$('input[name="hd_latitude_atual"]').val(marker.getPosition().lat());
 					$('#txtLongitude').val(marker.getPosition().lng());
+					$('input[name="hd_longitude_atual"]').val(marker.getPosition().lng());
 				}
 			}
 		});
@@ -82,14 +87,22 @@ $(document).ready(function () {
 			})
 		},
 		select: function (event, ui) {
+			/* if($){
+
+			}*/
 			$("#txtLatitude").val(ui.item.latitude);
+			$('input[name="hd_latitude_atual"]').val(ui.item.latitude);
     		$("#txtLongitude").val(ui.item.longitude);
+    		$('input[name="hd_longitude_atual"]').val(ui.item.longitude);
 			var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
 			marker.setPosition(location);
 			map.setCenter(location);
 			map.setZoom(16);
 			$.getJSON("http://maps.google.com/maps/api/geocode/json?address="+ui.item.latitude +","+ui.item.longitude+"&sensor=false",function(result){
-                $("#str-endereco").html("Seu endereço é: " +result.results[0].formatted_address);
+            	if($('#esconde').is(":visible")){
+                	$("#str-endereco").html("Seu endereço é: " +result.results[0].formatted_address);
+			}    
+            
             });
 		}
 	});
