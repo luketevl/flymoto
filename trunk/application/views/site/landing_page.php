@@ -50,9 +50,11 @@
 </head>
 <body>
 	<header>
+	<a href="#">
 	<section id="logo">
 		<img src="<?php echo base_url(); ?>resources/img/site/logo.png" />
 	</section>
+	</a>
 	<nav id="menu">
 		<a href="#oque">O que é</a>
 		<a href="#como">Como funciona</a>
