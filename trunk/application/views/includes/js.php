@@ -1,4 +1,4 @@
-
+	<script type="text/javascript" src="<?php echo base_url()?>resources/js/jquery.min.js"></script>
 
 
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>

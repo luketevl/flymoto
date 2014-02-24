@@ -8,8 +8,7 @@
 	<meta name="keywords" content="responsive menu, retina-ready, icon font, media queries, css3, transition, mobile" />
 	<meta name="author" content="Codrops" />
 	<title>Bem Vindo - FlyMoto</title>
-	<script type="text/javascript" src="<?php echo base_url()?>resources/js/jquery.min.js"></script>
-	
+		
    <?php
 		$this->load->view('includes/css');
 		$this->load->view('includes/js');
