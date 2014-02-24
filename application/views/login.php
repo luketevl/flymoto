@@ -3,33 +3,39 @@
 <head>
 	<meta charset="utf-8">
 	<title>Title pagina</title>
-
-	<style type="text/css">
-	</style>
-<!--	<script type="text/javascript" src="<?php echo base_url()?>resources/js/location.js"></script>
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-	<script type="text/javascript" src="<?php echo base_url()?>resources/js/mapa.js"></script> -->
+	<?php
+		$this->load->view('includes/css');
+		$this->load->view('includes/js');
+	?>
 </head>
+
 <body>
-<?php
-	echo form_open_multipart('login_controller/custom_form','name="form"');
-	echo form_fieldset('Login');
-
-	echo form_label('CPF/CNPJ');
-	echo form_input('cpf_cnpj_ent');
-	echo "<br />";
+<section class="em-linha">
+	<section id="login">
 	
-	echo form_label('Senha');
-	echo form_password('senha_ent');
-	echo "<br />";
-	
-	echo form_fieldset_close();
-	echo form_submit('submit','Logar');
+	<h1>ENTRAR</h1>
+		<?php
+			echo form_open_multipart('login_controller/custom_form','name="form"');
+			echo form_fieldset('Login');
 
-	echo form_close();
-?>
+			echo form_label('CPF/CNPJ');
+			echo form_input('cpf_cnpj_ent');
+			
+			
+			echo form_label('Senha');
+			echo form_password('senha_ent');
+			
+			
+			echo form_fieldset_close();
+			echo form_submit('submit','Logar');
 
+			echo form_close();
+		?>
 
-
+	</section>
+		<?php
+		 $this->load->view('cadastros/entidades');
+		?>
+</section>
 </body>
 </html>

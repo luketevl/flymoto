@@ -1,6 +1,8 @@
+<section id="cadastro">
+	<h1>CADASTRAR</h1>
 <?php
 	echo form_open_multipart('cadastros/entidades/custom_form','name="form"');
-	echo form_fieldset('Cadastro');
+	echo form_fieldset('Cadastrar');
 
 	echo form_hidden('ativo','1');
 	echo form_hidden('login_ent','');
@@ -11,15 +13,15 @@
 	echo "<br />";	
 	
 	echo form_label('Nome Completo');
-	echo form_input('nome_ent','{nome_ent}');
+	echo form_input('nome_ent','');
 	echo "<br />";	
 	
 	echo form_label('CPF/CNPJ');
-	echo form_input('cpf_cnpj_ent','{cpf_cnpj_ent}');
+	echo form_input('cpf_cnpj_ent','');
 	echo "<br />";
 	
 	echo form_label('Senha');
-	echo form_password('senha_ent','{senha_ent}');
+	echo form_password('senha_ent','');
 	echo "<br />";
 	
 	echo form_label('Confirmar Senha');
@@ -27,11 +29,11 @@
 	echo "<br />";
 
 	echo form_label('Telefone');
-	echo form_input('descricao_cont_tel','{descricao_cont_tel}');
+	echo form_input('descricao_cont_tel','');
 	echo "<br />";
 	
 	echo form_label('Celular');
-	echo form_input('descricao_cont_cel','{descricao_cont_cel}');
+	echo form_input('descricao_cont_cel','');
 	
 	echo form_fieldset_close();
 	echo form_submit('submit','Confirmar');
@@ -160,3 +162,4 @@
 */
 	echo form_close();
 ?>
+</section>

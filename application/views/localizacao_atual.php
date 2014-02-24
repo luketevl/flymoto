@@ -17,9 +17,9 @@
                     </div>
                   <!--  <input type="hidden" id="txtLatitude" name="txtLatitude" />
                     <input type="hidden" id="txtLongitude" name="txtLongitude" />
--->
+			--> <hr class ="linha" />
                 </fieldset>
-                  <div id="mapa" style="height: 500px; width: 700px">
+                  <div id="mapa" style="height: 500px; width: initial" >
 		    <?php
 			    //echo form_hidden('longitude_cli');
 	            //echo form_hidden('latitude_cli');

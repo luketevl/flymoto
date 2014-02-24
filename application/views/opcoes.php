@@ -1,3 +1,4 @@
+<h1>OPÇÕES</h1>
 <?php
 	echo form_open('opcoes/custom_form');
 	echo form_hidden('id_opc','{id_opc}');
