@@ -50,9 +50,10 @@ input[type="text"],input[type="password"] {
 	background: #FFF;
 	color: #666;
 	font: 15px 'Open Sans',Arial; 
-	height: 14px;
+	height: 28px;
 	padding: 9px;
-	width: 474px; 
+	width: 90%;
+
 }
 
 input[type="button"], input[type="submit"] { 
@@ -87,13 +88,13 @@ input[type="button"]:hover ,  input[type="submit"]{ background: #12587C }
 }
 #txtEndereco{
 	height: 34px;
-	width: 61%;
+	width: 57%;
 }
 input[type=text], input[type=password]{
 	border-style: solid;
 	border-color: #ccc;
 	border-width: 1px;
-	height: 20px;
+	//height: 20px;
 	}
 }
 
@@ -144,4 +145,12 @@ input[type="submit"]:hover { background: #12587C }
 .ui-autocomplete .ui-corner-all { 
 	color: #666 !important;
 	display: block;
+}
+
+.linha{
+	background-color: #ccc;
+	border-style: solid;
+	width: 100%;
+	margin-bottom: 10px;
+	height: 1px;
 }

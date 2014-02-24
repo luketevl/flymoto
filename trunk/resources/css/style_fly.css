@@ -55,3 +55,20 @@ input[name=vr_proposta]{
 	display: inherit;
 
 }
+
+fieldset{
+	border-width: 1px !important;
+}
+
+#login, #cadastro{
+	float:left;
+	width: 48%;
+}
+.em-linha label, input[type="submit"]{
+	display:block;
+	padding-top: 10px;
+	padding-bottom: 2px;
+}
+input[type="radio"]{
+	margin-left: 10px;
+}
