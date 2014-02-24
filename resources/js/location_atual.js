@@ -22,7 +22,7 @@ $(document).ready(function(){
           });
 
             $.getJSON("http://maps.google.com/maps/api/geocode/json?address="+position.coords.latitude +","+position.coords.longitude+"&sensor=false",function(result){
-                 $("#str-endereco").html("Seu endereço é: " +result.results[0].formatted_address);
+                 $("#str-endereco").html(result.results[0].formatted_address);
             });
 }
 
