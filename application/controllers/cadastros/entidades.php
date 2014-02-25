@@ -36,7 +36,7 @@ class Entidades extends CI_Controller{
 			//$vei->salvar($_data);
 		}
 
-		verifica_acesso($_data['id_ent'],$this->session->userdata('tipo_ent'));
+		verifica_acesso($_data['id_ent'],$this->session->userdata('tipo_ent'), false);
 		
 		//-$this->parser->parse('cadastros/entidade',array());
 	}
