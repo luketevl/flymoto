@@ -84,10 +84,10 @@ class Opcoe extends DataMapper {
 	/**
 	 * Constructor: calls parent constructor
 	 */
-    function __construct($id = NULL)
-	{
-		parent::__construct($id);
-    }
+    function Opcoe(){
+		parent::DataMapper();
+	}
+
 
 	// --------------------------------------------------------------------
 	// Post Model Initialisation
@@ -127,18 +127,24 @@ class Opcoe extends DataMapper {
 	*/
 	public function salvar($_data){
 		//$e = new Entidade();
-		echo "<pre>"; print_r($_data); "</pre>";
+		//echo "<pre>"; print_r($_data); "</pre>";
 		//$n->dt_criacao = 		date("Y-m-d H:i:s");
 		//$this->id_opc         = $_data['id_opc'];
-		$this->id_ent         = $_data['id_ent'];
-		$this->vr_por_km      = $_data['vr_por_km'];
-		return $this->save();
-		//echo "<print>"; print_r($e->id); echo "</pre>";
+		$o = new Opcoe();
+		$o->where('id_ent',$_data['id_ent'])->get();
+		if(!$o->exists()){
+			$this->id_ent         = $_data['id_ent'];
+			$this->vr_por_km      = $_data['vr_por_km'];
+			return $this->save();
+		}
+		else{
+			return $o->update('vr_por_km', $_data['vr_por_km']);
+		}
 	}
+
 	public function getVrKm($id){
 		return $this->where('id_ent',$id)->get();
 	}
-
 }
 /* End of file template.php */
 /* Location: ./application/models/template.php */

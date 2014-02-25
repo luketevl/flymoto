@@ -35,7 +35,6 @@ $(document).ready(function(){
 	});
 
 	 $('input[name="btnEnviar"]').click(function(){
-	        alert();
             console.log($('form[name="formSolicitar"] > input[name="latitude_cli"]').val());
             $('form[name="formSolicitar"] > input[name="latitude_cli"]').val($('input[name="latitude_cli_entra"]').val());
             $('form[name="formSolicitar"] > input[name="longitude_cli"]').val($('input[name="longitude_cli_entra"]').val());
@@ -43,7 +42,7 @@ $(document).ready(function(){
         });
 
 		$('input:button').click(function(){
-			if($(this).attr('id') == 'enviarProposta'){
+	        	if($(this).attr('id') == 'enviarProposta'){
 				var formulario = $(this).parent('form');
 				var dados = formulario.serialize();
 		        $.ajax({
