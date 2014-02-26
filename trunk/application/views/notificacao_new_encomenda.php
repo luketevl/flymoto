@@ -42,7 +42,10 @@ $.getJSON("http://maps.google.com/maps/api/geocode/json?address="+position.coord
 
 		<p>
 		 <div class="dropdown">
-			Feita por: <a data-toggle="dropdown" href="#">{nome_ent} +</a>
+			<a data-toggle="dropdown" href="#"> 
+			<img src="<?php echo base_url()?>resources/img/avatar.jpg" />
+			{nome_ent} +
+			</a>
 			  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 				<detais>
 					<p>
