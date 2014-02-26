@@ -10,7 +10,8 @@ class Inicio extends CI_Controller{
 	 	$e = new Encomenda();
 		$encomendas = array();
 		$encomendas['encomendas'] = $e->getEncomendasById($this->session->userdata['id_ent']) ;
-		$encomendas['id_logado'] = $this->session->userdata('id_ent');
+		$encomendas['id_logado']  = $this->session->userdata('id_ent');
+		$encomendas['nome_ent']   = $this->session->userdata('nome_ent');
 		$opcoes = new Opcoe();
 		$vrKm = $opcoes->getVrKm($encomendas['id_logado'])->stored->vr_por_km;
 		//echo $vrKm;
@@ -19,9 +20,9 @@ class Inicio extends CI_Controller{
 		foreach ($encomendas['encomendas'] as $key => $value) {
 
 			$value->formatted_address = '';
-			$value->vr_medio = '';
-			$value->duracao = '';
-			$value->distancia = '';
+			$value->vr_medio          = '';
+			$value->duracao           = '';
+			$value->distancia         = '';
 
 			$json = file_get_contents("http://maps.google.com/maps/api/geocode/json?address=". $value->latitude_enco  . "," . $value->longitude_enco."&sensor=false"     );
 		

@@ -17,7 +17,7 @@ footer{
 	float:right;
 	/* background-color: yellow; */
 	width: 38%;
-	max-height: 500px;
+	max-height: 670px;
 	overflow: auto;
 }
 
@@ -63,12 +63,4 @@ fieldset{
 #login, #cadastro{
 	float:left;
 	width: 48%;
-}
-.em-linha label, input[type="submit"]{
-	display:block;
-	padding-top: 10px;
-	padding-bottom: 2px;
-}
-input[type="radio"]{
-	margin-left: 10px;
 }

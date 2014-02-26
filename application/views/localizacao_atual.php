@@ -6,9 +6,11 @@
 		echo form_hidden('hd_latitude_atual');
 		echo form_hidden('hd_longitude_atual');
 	?>
-	<p><span id="str-endereco"><span></p>
+	<p class="bs-callout bs-callout-info"><span id="str-endereco"><span></p>
 	<!-- <input type="button" name="btn_corrigir" value="Minha Localização" style="margin-top:5px; margin-bottom:9px;" /> -->
-	<input type="button" name="btn_modificar" value="Corrigir Localização" style="margin-top:5px; margin-bottom:9px;" id="esconde" />
+	<button type="button" name="btn_modificar" style="margin-top:5px; margin-bottom:9px;" id="esconde" class="btn btn-default" >
+	    <span class="glyphicon glyphicon-refresh"></span> Corrigir Localização
+	</button>
 	    <article>
 	        <fieldset>
                     <div class="campos">
@@ -16,7 +18,11 @@
                         <?php
                             echo form_input('txtEndereco','',"id='txtEndereco'");
                         ?>
-                        <input type="button" id="btnEndereco" name="btnEndereco" value="Mostrar no mapa" />
+                        <button type="button" id="btnEndereco" name="btnEndereco" class="btn btn-default" >
+						    <span class="glyphicon glyphicon-flag"></span> Mostrar no Mapa
+						
+						</button>
+
                     </div>
                   <!--  <input type="hidden" id="txtLatitude" name="txtLatitude" />
                     <input type="hidden" id="txtLongitude" name="txtLongitude" />

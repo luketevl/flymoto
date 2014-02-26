@@ -10,33 +10,33 @@
 
 	echo form_radio('tipo_ent','M',TRUE).'Motoboy';
 	echo form_radio('tipo_ent','C').'Cliente';
-	echo "<br />";	
+		
 	
 	echo form_label('Nome Completo');
 	echo form_input('nome_ent','');
-	echo "<br />";	
+		
 	
 	echo form_label('CPF/CNPJ');
 	echo form_input('cpf_cnpj_ent','');
-	echo "<br />";
+	
 	
 	echo form_label('Senha');
 	echo form_password('senha_ent','');
-	echo "<br />";
+	
 	
 	echo form_label('Confirmar Senha');
 	echo form_password('senha_ent_conf');
-	echo "<br />";
+	
 
 	echo form_label('Telefone');
 	echo form_input('descricao_cont_tel','');
-	echo "<br />";
+	
 	
 	echo form_label('Celular');
 	echo form_input('descricao_cont_cel','');
 	
 	echo form_fieldset_close();
-	echo form_submit('submit','Confirmar');
+	echo form_submit('submit','Cadastrar','class="btn btn-default"');
 
 /*
 	echo form_hidden('id_ent','{id_ent}');
@@ -53,45 +53,45 @@
 
 	echo form_label('Nome Completo');
 	echo form_input('nome_ent','{nome_ent}');
-	echo "<br />";
+	
 
 	echo form_label('CPF/CNPJ');
 	echo form_input('cpf_cnpj_ent','{cpf_cnpj_ent}');
-	echo "<br />";
+	
 
 	echo form_label('CEP');
 	echo form_input('cep_end_temp','{cep_end_temp}');
 	
-	echo "<br />";
+	
 	echo form_label('Rua');
 	echo form_input('rua_end_temp','{rua_end_temp}');
 	
-	echo "<br />";
+	
 	echo form_label('Número');
 	echo form_input('num_end_temp','{num_end_temp}');
 	
-	echo "<br />";
+	
 	echo form_label('Complemento');
 	echo form_input('complemento_end_temp','{complemento_end_temp}');
 	
-	echo "<br />";
+	
 	echo form_label('Bairro');
 	echo form_input('bairro_end_temp','{bairro_end_temp}');
 	
-	echo "<br />";
+	
 	echo form_label('Cidade');
 	echo form_input('cidade_end_temp','{cidade_end_temp}');
 	
 
-	echo "<br />";
+	
 	echo form_label('Telefone');
 	echo form_input('descricao_cont_tel','{descricao_cont_tel}');
 	
-	echo "<br />";
+	
 	echo form_label('Celular');
 	echo form_input('descricao_cont_cel','{descricao_cont_cel}');
 	
-	echo "<br />";
+	
 	echo form_fieldset_close();
 	echo form_button('next','Avançar');
 	
@@ -101,16 +101,16 @@
 	echo form_label('Fabricante');
 	echo form_input('fabricante_vei','{fabricante_vei}');
 
-	echo "<br />";
+	
 	echo form_label('Modelo');
 	echo form_input('mod_vei','{mod_vei}');
 
-	echo "<br />";
+	
 	echo form_label('Placa');
 	echo form_input('placa_vei','{placa_vei}');
 	
 
-	echo "<br />";
+	
 	echo form_label('Acessórios');
 	echo form_checkbox('','');
 	echo form_checkbox('','');
@@ -126,19 +126,19 @@
 
 	echo form_label('Sua foto');
 	echo form_upload('foto');
-	echo "<br />";
+	
 
 	echo form_label('Identidade');
 	echo form_upload('identidade');
-	echo "<br />";
+	
 
 	echo form_label('Carteria de Motorista');
 	echo form_upload('carteira');
-	echo "<br />";
+	
 
 	echo form_label('Comprovante Residência');
 	echo form_upload('residencia');
-	echo "<br />";
+	
 
 	echo form_fieldset_close();
 	echo form_button('next','Avançar');
@@ -154,9 +154,9 @@
 
 			Seção 1.10.33 de "de Finibus Bonorum et Malorum", escrita por Cícero em 45 AC"';
 
-	echo "<br />";
+	
 	echo form_checkbox('','');
-	echo "<br />";
+	
 	echo form_submit('submit','Confirmar');
 	echo form_fieldset_close();
 */

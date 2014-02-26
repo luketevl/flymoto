@@ -31,4 +31,12 @@
     -->
     <script type="text/javascript" src="<?php echo base_url()?>resources/js/mapa_search.js"></script>
 	
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins)
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	 -->
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="<?php echo base_url()?>resources/bootstrap/js/bootstrap.min.js"></script>
+	
 	<script type="text/javascript" src="<?php echo base_url()?>resources/js/my_functions.js"></script>

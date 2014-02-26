@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Responsive Retina-Friendly Menu with different, size-dependent layouts" />
 	<meta name="keywords" content="responsive menu, retina-ready, icon font, media queries, css3, transition, mobile" />
 	<meta name="author" content="Codrops" />
@@ -27,17 +27,6 @@
 						<i aria-hidden="true" class="icon-home"></i>
 					</span>
 					<span>Inicio</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-				<?php
- 					echo form_hidden('url','cadastros/entidades');
-				?>
-					<span class="icon"> 
-						<i aria-hidden="true" class="icon-team"></i>
-					</span>
-					<span>Cadastrar</span>
 				</a>
 			</li>
 			<li>
@@ -76,6 +65,18 @@
 						<i aria-hidden="true" class="icon-contact"></i>
 					</span>
 					<span>Contato</span>
+				</a>
+			</li>
+			<li>
+				<a href="login_controller/deslogar">
+				<?php
+
+ 				#	echo form_hidden('url','cadastros/entidades');
+				?>
+					<span class="icon"> 
+						<i aria-hidden="true" class="icon-team"></i>
+					</span>
+					<span><?php echo $this->session->userdata('nome_ent'); ?></span>
 				</a>
 			</li>
 		</ul>

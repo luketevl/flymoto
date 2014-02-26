@@ -14,6 +14,7 @@ class Login_Controller extends CI_Controller{
 		$e = new Entidade();
 		$temp = $e->verificar_login($_data['cpf_cnpj_ent'], $_data['senha_ent']);
 		if(!empty($temp->stored->id_ent)){
+		//	echo "<pre>"; print_r($e); echo "</pre>";die;
 			$this->login->criarSessao($e);
 		//	$this->parser->parse('index',(array)$e->stored);
 		}
@@ -23,5 +24,9 @@ class Login_Controller extends CI_Controller{
 	public function atualizarLocalizacao(){
 		$this->session->set_userdata('latitude_atual',$_GET['latitude']);
 		$this->session->set_userdata('longitude_atual',$_GET['longitude']);
+	}
+
+	public function deslogar(){
+		$this->login->deslogar();
 	}
 }
