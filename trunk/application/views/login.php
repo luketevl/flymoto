@@ -27,7 +27,7 @@
 			
 			
 			echo form_fieldset_close();
-			echo form_submit('submit','Logar');
+			echo form_submit('submit','Entrar','class="btn btn-default"');
 
 			echo form_close();
 		?>

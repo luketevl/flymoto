@@ -27,7 +27,7 @@ $.getJSON("http://maps.google.com/maps/api/geocode/json?address="+position.coord
 	<section id="new_encomenda">
 		{encomendas}
 		<?php 
-			echo form_open('encomenda_controller/enviar_proposta','name="formEncomenda"');
+			echo form_open('encomenda_controller/enviar_proposta','name="formEncomenda" class="bs-callout bs-callout-warning"');
 			echo form_hidden('id_enc','{id_enc}');
 			echo form_hidden('id_ent','{id_ent}');
 			echo form_hidden('longitude_cli','{longitude_cli}');
@@ -41,13 +41,19 @@ $.getJSON("http://maps.google.com/maps/api/geocode/json?address="+position.coord
 		</h2>
 
 		<p>
-			Feita por: <a href="#">{nome_ent}</a>
+		 <div class="dropdown">
+			Feita por: <a data-toggle="dropdown" href="#">{nome_ent} +</a>
+			  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 				<detais>
 					<p>
 						Telefone: {descricao_cont}
+					</p>
+					<p>
 						CPF/CNPJ: {cpf_cnpj_ent}
 					</p>
 				</detais>
+		  </ul>
+		</div>
 			Destino: {formatted_address}
 			Distancia: {distancia}
 			Duracao: {duracao}
@@ -57,7 +63,9 @@ $.getJSON("http://maps.google.com/maps/api/geocode/json?address="+position.coord
 				echo form_input('vr_proposta','{vr_medio}');
 				//echo form_submit('enviar','Enviar Proposta');
 			?>
-			<input type="button" name="enviarProposta" id="enviarProposta" value="Enviar Proposta" />
+			<button type="button" name="enviarProposta" id="enviarProposta" class="btn btn-default" >
+				<span class="glyphicon glyphicon-usd"></span> Enviar Proposta
+			</button>
 		</p>
 		<?php
 			echo form_close();

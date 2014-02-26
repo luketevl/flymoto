@@ -40,7 +40,6 @@ $(document).ready(function(){
             $('form[name="formSolicitar"] > input[name="longitude_cli"]').val($('input[name="longitude_cli_entra"]').val());
             
         });
-
 		$('input:button').click(function(){
 	        	if($(this).attr('id') == 'enviarProposta'){
 				var formulario = $(this).parent('form');
