@@ -15,14 +15,14 @@
 	        <fieldset>
                     <div class="campos">
                         <label for="txtEndereco">Endereço:</label>
-                        <?php
-                            echo form_input('txtEndereco','',"id='txtEndereco'");
-                        ?>
-                        <button type="button" id="btnEndereco" name="btnEndereco" class="btn btn-default" >
-						    <span class="glyphicon glyphicon-flag"></span> Mostrar no Mapa
-						
-						</button>
-
+                        <div class="col-lg-6">
+					        <div class="input-group">
+			        		  <input type="text" class="form-control" id='txtEndereco' name="btnEndereco">
+				          		  	<span class="input-group-btn">
+							            	<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-flag"></span> Mostrar no Mapa</button>
+						          	</span>
+					        </div><!-- /inpu			t-group -->
+	      				</div>
                     </div>
                   <!--  <input type="hidden" id="txtLatitude" name="txtLatitude" />
                     <input type="hidden" id="txtLongitude" name="txtLongitude" />
