@@ -58,8 +58,8 @@ $.getJSON("http://maps.google.com/maps/api/geocode/json?address="+position.coord
 		</div>
 			<p><strong>Destino:</strong></p> {formatted_address}
 				<div class="row">
-					  <div class="col-md-4"><strong>Distancia:</strong> {distancia}</div>
-					  <div class="col-md-offset-2"><strong>Duracao:</strong> {duracao}</div>
+					  <div class="col-md-4"><strong>Distância:</strong> {distancia}</div>
+					  <div class="col-md-offset-2"><strong>Duração:</strong> {duracao}</div>
 				</div>
 			<div class="form-group">
 			    <label for="inputEmail3" class="col-sm-2 control-label">Proposta: </label>
