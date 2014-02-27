@@ -3,6 +3,12 @@ $(document).ready(function(){
 		if($(this).attr('id') == 'inicio'){
 			location.reload();	
 		}
+		else if($(this).attr('id') == 'opcoes'){
+			$('#localizacao_atual').hide(700);
+		}
+		else{
+			$('#localizacao_atual').show(700);
+		}
 		var valor = $(this).find('input[name="url"]').val();
 		if(valor != 'undefined'){
 			$('#sessao-json > #troca').load(valor);
