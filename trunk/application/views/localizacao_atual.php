@@ -13,9 +13,9 @@
 	</button>
 	    <article>
 	        <fieldset>
+                    <label for="txtEndereco">Endereço:</label>
                     <div class="campos">
-                        <label for="txtEndereco">Endereço:</label>
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
 					        <div class="input-group">
 			        		  <input type="text" class="form-control" id='txtEndereco' name="btnEndereco">
 				          		  	<span class="input-group-btn">
@@ -26,8 +26,9 @@
                     </div>
                   <!--  <input type="hidden" id="txtLatitude" name="txtLatitude" />
                     <input type="hidden" id="txtLongitude" name="txtLongitude" />
-			--> <hr class ="linha" />
+			--> 
                 </fieldset>
+			<hr class ="linha" />
                   <div id="mapa" style="height: 500px; width: initial" >
 		    <?php
 			    //echo form_hidden('longitude_cli');

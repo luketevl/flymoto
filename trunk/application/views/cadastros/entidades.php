@@ -1,18 +1,89 @@
 <section id="cadastro">
 	<h1>CADASTRAR</h1>
 <?php
-	echo form_open_multipart('cadastros/entidades/custom_form','name="form"');
+	echo form_open_multipart('cadastros/entidades/custom_form','name="form" class="form-horizontal" role="form"');
 	echo form_fieldset('Cadastrar');
 
 	echo form_hidden('ativo','1');
 	echo form_hidden('login_ent','');
     echo form_hidden('dt_nasc_ent','2014-02-05');	
+	#echo form_radio('tipo_ent','M',TRUE).'Motoboy';
+	#echo form_radio('tipo_ent','C').'Cliente';
+?>
+	<div class="radio">
+  <label>
+    <input type="radio" name="tipo_ent" id="optionsRadios1" value="M" checked>
+    Motoboy
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="tipo_ent" id="optionsRadios2" value="C">
+    Cliente
+  </label>
+</div>	
 
-	echo form_radio('tipo_ent','M',TRUE).'Motoboy';
-	echo form_radio('tipo_ent','C').'Cliente';
-		
-	
-	echo form_label('Nome Completo');
+<div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+  </div>
+
+<div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Nome</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" placeholder="Nome Completo" name="nome_ent" />
+    </div>
+  </div>
+
+<div class="form-group">
+	    <label for="inputEmail3" class="col-sm-2 control-label">CPF/CNPJ</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="inputEmail3" placeholder="CPF ou CNPJ" name="cpf_cnpj_ent" />
+	    </div>
+	  </div>
+
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Senha</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Senha" name="senha_ent" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Confirmar Senha</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Telefone fixo" name="senha_ent_conf">
+    </div>
+  </div>
+  
+<div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Telefone</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputPassword3" placeholder="Telefone Celular" name="descricao_cont_tel">
+    </div>
+  </div>
+  
+
+<div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Celular</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputPassword3" placeholder="Confirmar Senha" name="descricao_cont_cel">
+    </div>
+  </div>
+  
+
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Cadastrar</button>
+    </div>
+  </div>
+
+
+<?php	
+	/*echo form_label('Nome Completo');
 	echo form_input('nome_ent','');
 		
 	
@@ -34,9 +105,9 @@
 	
 	echo form_label('Celular');
 	echo form_input('descricao_cont_cel','');
-	
+	*/
 	echo form_fieldset_close();
-	echo form_submit('submit','Cadastrar','class="btn btn-default"');
+	#echo form_submit('submit','Cadastrar','class="btn btn-default"');
 
 /*
 	echo form_hidden('id_ent','{id_ent}');

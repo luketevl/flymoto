@@ -41,7 +41,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="#" id="opcoes">
 				<?php
  					echo form_hidden('url','opcoes');
 				?>
@@ -56,7 +56,7 @@
 					<span class="icon">
 						<i aria-hidden="true" class="icon-regulamento"></i>
 					</span>
-					<span>Regulamento</span>
+					<span>Ajuda</span>
 				</a>
 			</li>
 			<li>

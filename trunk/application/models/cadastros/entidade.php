@@ -84,10 +84,9 @@ class Entidade extends DataMapper {
 	/**
 	 * Constructor: calls parent constructor
 	 */
-    function __construct($id = NULL)
-	{
-		parent::__construct($id);
-    }
+    function Entidade(){
+		parent::DataMapper();
+	}
 
 	// --------------------------------------------------------------------
 	// Post Model Initialisation

@@ -40,10 +40,9 @@ $.getJSON("http://maps.google.com/maps/api/geocode/json?address="+position.coord
 			Nova Encomenda 
 		</h2>
 
-		<p>
 		 <div class="dropdown">
 			<a data-toggle="dropdown" href="#"> 
-			<img src="<?php echo base_url()?>resources/img/avatar.jpg" />
+			<img src="<?php echo base_url()?>resources/img/avatar.jpg" class="img-circle" />
 			{nome_ent} +
 			</a>
 			  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
