@@ -27,7 +27,7 @@ $.getJSON("http://maps.google.com/maps/api/geocode/json?address="+position.coord
 	<section id="new_encomenda">
 		{encomendas}
 		<?php 
-			echo form_open('encomenda_controller/enviar_proposta','name="formEncomenda" class="bs-callout bs-callout-warning"');
+			echo form_open('encomenda_controller/enviar_proposta','name="formEncomenda" class="bs-callout bs-callout-warning form-horizontal" role="form"');
 			echo form_hidden('id_enc','{id_enc}');
 			echo form_hidden('id_ent','{id_ent}');
 			echo form_hidden('longitude_cli','{longitude_cli}');
@@ -56,18 +56,31 @@ $.getJSON("http://maps.google.com/maps/api/geocode/json?address="+position.coord
 				</detais>
 		  </ul>
 		</div>
-			Destino: {formatted_address}
-			Distancia: {distancia}
-			Duracao: {duracao}
-			<br />
-			Proposta: 
+			<p><strong>Destino:</strong></p> {formatted_address}
+				<div class="row">
+					  <div class="col-md-4"><strong>Distancia:</strong> {distancia}</div>
+					  <div class="col-md-offset-2"><strong>Duracao:</strong> {duracao}</div>
+				</div>
+			<div class="form-group">
+			    <label for="inputEmail3" class="col-sm-2 control-label">Proposta: </label>
+			</div>	
+			<div class="form-group">
+			   <div class="input-group">
+				  <span class="input-group-addon">R$</span>
+				  <input type="text" class="form-control text-right" placeholder="Valor" name="vr_proposta" value="{vr_medio}" />
+				</div>
+			</div>
 			<?php
-				echo form_input('vr_proposta','{vr_medio}');
+				#echo form_input('vr_proposta','{vr_medio}');
 				//echo form_submit('enviar','Enviar Proposta');
 			?>
-			<button type="button" name="enviarProposta" id="enviarProposta" class="btn btn-default" >
-				<span class="glyphicon glyphicon-usd"></span> Enviar Proposta
-			</button>
+			<div class="form-group">
+			    <div class="col-sm-offset-1">
+				<button type="button" name="enviarProposta" id="enviarProposta" class="btn btn-default" >
+					<span class="glyphicon glyphicon-usd"></span> Enviar Proposta
+				</button>
+				</div>
+			</div>
 		</p>
 		<?php
 			echo form_close();
